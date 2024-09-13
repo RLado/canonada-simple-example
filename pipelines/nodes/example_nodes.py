@@ -2,6 +2,7 @@
 Example nodes for the pipeline (this modules do not need to be in a specific directory)
 """
 
+
 def add_offset(signal: dict, offset: float) -> dict:
     """
     Adds a given offset to a signal
@@ -16,7 +17,8 @@ def add_offset(signal: dict, offset: float) -> dict:
 
     signal["signal"] = [value + offset for value in signal["signal"]]
     return signal
-    
+
+
 def get_signal_max(signal: dict) -> float:
     """
     Returns the maximum value of a signal
@@ -29,6 +31,7 @@ def get_signal_max(signal: dict) -> float:
     """
 
     return max(signal["signal"])
+
 
 def calculate_mean(signal: dict) -> float:
     """
@@ -43,7 +46,8 @@ def calculate_mean(signal: dict) -> float:
 
     return sum(signal["signal"]) / len(signal["signal"])
 
-def list_stats(signals: dict, maximum: float, mean: float)->dict:
+
+def list_stats(signals: dict, maximum: float, mean: float) -> dict:
     """
     Returns a dictionary with the stats of the signals
 
@@ -61,7 +65,8 @@ def list_stats(signals: dict, maximum: float, mean: float)->dict:
         "maximum": maximum,
         "mean": mean,
     }
-    
+
+
 def calculate_better_stats(signal: dict, stats: dict) -> dict:
     """
     Returns a dictionary with the stats of the signals
@@ -73,7 +78,9 @@ def calculate_better_stats(signal: dict, stats: dict) -> dict:
     Returns:
         dict: A dictionary with the stats of the signals
     """
-    assert signal["id"] == stats["id"], "Canonada will ensure that catalog keys match. If this assertion fails, blame Canonada." # Always True
+    assert (
+        signal["id"] == stats["id"]
+    ), "Canonada will ensure that catalog keys match. If this assertion fails, blame Canonada."  # Always True
 
     return {
         "id": signal["id"],

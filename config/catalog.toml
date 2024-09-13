@@ -1,21 +1,21 @@
 [raw_signals]
 type = "canonada.json_multi"
-keys=[]
-path="data/raw_signals"
+keys = []
+path = "data/raw_signals"
 
 [stats]
 type = "canonada.csv_rows"
-keys=["id"] # Keys are only used when two sources from the catalog are ingested in the same pipeline (leave an empty list otherwise)
-headers=["id", "maximum", "mean"]
-path="data/stats.csv"
+keys = ["id"] # Keys are only used when two sources from the catalog are ingested in the same pipeline (leave an empty list otherwise)
+headers = ["id", "maximum", "mean"]
+path = "data/stats.csv"
 
 [offset_signals_catalog]
 type = "canonada.json_multi"
-keys=["id"]
-path="data/offset_signals"
+keys = ["id"]
+path = "data/offset_signals"
 
 [better_stats]
 type = "canonada.csv_rows"
-keys=[]
-headers=["id", "length", "resolution", "mean", "maximum"]
-path="data/better_stats.csv"
+keys = []
+headers = ["id", "length", "resolution", "mean", "maximum"]
+path = "data/better_stats.csv"
