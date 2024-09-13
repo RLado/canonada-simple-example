@@ -1,0 +1,8 @@
+[project]
+name = "canonada-simple-example"
+version = "0.1.0"
+authors = ["Ricard Lado"]
+description = "A simple example project to showcase Canonada"
+
+[logging]
+level = "INFO"
