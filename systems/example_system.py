@@ -2,8 +2,7 @@ import sys
 from canonada.system import System
 
 # Import the pipelines from pipelines/example_pipelines.py
-sys.path.append("../pipelines")
-from pipelines import example_pipelines
+import pipelines.example_pipelines as example_pipelines
 
 
 # Define the pipeline system equivalent to `canonada run pipelines streaming_pipe streaming_pipe`
