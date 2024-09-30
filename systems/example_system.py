@@ -1,4 +1,3 @@
-import sys
 from canonada.system import System
 
 # Import the pipelines from pipelines/example_pipelines.py
