@@ -4,7 +4,7 @@ from canonada.system import System
 import pipelines.example_pipelines as example_pipelines
 
 
-# Define the pipeline system equivalent to `canonada run pipelines streaming_pipe streaming_pipe`
+# Define the pipeline system equivalent to `canonada run pipelines streaming_pipe calculate_better_stats`
 example_system = System(
     name="example_system",
     pipelines=[
