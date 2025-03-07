@@ -6,3 +6,4 @@ description = "A simple example project to showcase Canonada"
 
 [logging]
 level = "INFO"
+show_progress = true
