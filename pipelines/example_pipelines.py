@@ -1,8 +1,16 @@
 # Import the Canonada Classes
+from typing import Any
 from canonada.pipeline import Node, Pipeline
 
 # Import the nodes from pipelines/nodes/example_nodes.py 
 from .nodes import example_nodes
+
+# Helper identity function
+def identity(x: Any) -> Any:
+    """
+    Just pass the input to the output
+    """
+    return x
 
 # Simple pipeline
 streaming_pipe = Pipeline("streaming_pipe", [
@@ -16,7 +24,7 @@ streaming_pipe = Pipeline("streaming_pipe", [
             ),
         # Save the previous output to disk with a dummy module
         Node(
-            func=lambda x: x, # Just pass the input to the output
+            func=identity, # Just pass the input to the output
             input=["offset_signals"],
             output=["offset_signals_catalog"],
             name="save_offsets",
